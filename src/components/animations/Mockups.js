@@ -17,17 +17,44 @@ const MockupWrapper = styled.div`
   position: relative;
   perspective: 5000;
 
-  div{
-      transform: rotateY(20deg) rotateX(30deg);
-      transform-origin: bottom left;
+  div {
+    transform: rotateY(-20deg) rotateX(20deg);
+    transform-origin: bottom left;
   }
 
   * {
-      transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   :hover div {
-      transform: rotateY(0deg) rotateX(0deg);
+    transform: rotateX(0deg) rotateY(0deg);
+
+    // Nested Hover //
+    :hover {
+      filter: brightness(150%) saturate(120%);
+    }
+  }
+
+  // Transition Delay to all mockups // 
+
+  &.mockup1 {
+    transform: translate(-30px, -30px);
+    transition-delay: 0.1s;
+  }
+  &.mockup2 {
+    transform: translate(0, -30px);
+    transition-delay: 0.2s;
+  }
+  &.mockup3 {
+    transition-delay: 0s;
+  }
+  &.mockup4 {
+    transform: translate(-120px, 30px);
+    transition-delay: 0.1s;
+  }
+  &.mockup5 {
+    transform: translate(-90px, 30px);
+    transition-delay: 0.2s;
   }
 
   .mockup1 {
