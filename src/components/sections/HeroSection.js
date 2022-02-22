@@ -10,18 +10,20 @@ function HeroSection() {
     <Wrapper>
       <ContentWrapper>
         <TextWrapper>
-        <Title>Design <br />
-         and Code React apps</Title>
-        <Descripition>
-          Don't skip design. Learn design and code by building real apps with
-          React and Swift. Complete courses about the best tools.
-        </Descripition>
-        <PurchaseButton
-        title = "Start learning"
-        subtitles = "120+ hours of video"
-        />
+          <Title>
+            Design <br />
+            and Code React apps
+          </Title>
+          <Descripition>
+            Don't skip design. Learn design and code by building real apps with
+            React and Swift. Complete courses about the best tools.
+          </Descripition>
+          <PurchaseButton
+            title="Start learning"
+            subtitles="120+ hours of video"
+          />
         </TextWrapper>
-        <Mockups />        
+        <Mockups />
       </ContentWrapper>
     </Wrapper>
   )
@@ -43,23 +45,14 @@ const ContentWrapper = styled.div`
 `
 
 const TextWrapper = styled.div`
-max-width: 360px;
-display: grid;
-gap: 30px;
+  max-width: 360px;
+  display: grid;
+  gap: 30px;
 `
 const Title = styled(H1)`
-color: ${themes.dark.text1};
+  color: ${themes.dark.text1};
 `
 const Descripition = styled(MediumText)`
-font-size: 17px;
-line-height: 130%;
+  font-size: 17px;
+  line-height: 130%;
 `
-
-
-
-
-
-
-
-
-

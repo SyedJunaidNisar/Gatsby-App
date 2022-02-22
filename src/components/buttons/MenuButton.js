@@ -1,19 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 import { Link } from "gatsby"
-import { menuData } from '../../data/menuData'
-
 
 export default function MenuButton(props) {
-    const { item } = props
-    return(
-        <Link to={item.link} >
-            <MenuItem title={item.title}>
-              <img src={item.icon} alt={item.title} />
-              {item.title}
-            </MenuItem>
-          </Link>
-    )
+  const { item } = props
+  return (
+    <Link to={item.link}>
+      <MenuItem title={item.title}>
+        <img src={item.icon} alt={item.title} />
+        {item.title}
+      </MenuItem>
+    </Link>
+  )
 }
 
 const MenuItem = styled.div`
