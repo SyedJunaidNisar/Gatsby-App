@@ -7,18 +7,26 @@ import MenuTooltip from "../tooltips/MenuTooltips"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  function handleClick(event) {
+    setIsOpen(!isOpen)
+    event.preventDefault()
+  }
 
   return (
     <Wrapper>
       <Link to="/">
-        <img src="/images/logos/logo.svg" />
+        <img src="/images/logos/logo.svg" alt="Logo" />
       </Link>
       <MenuWrapper count={menuData.length}>
         {menuData.map((item, index) =>
           item.link === "/account" ? (
             <button onClick={() => setIsOpen(!isOpen)}>Account</button>
           ) : (
-            <MenuButton item={item} key={index} />
+            <MenuButton
+              item={item}
+              key={index}
+              onClick={event => handleClick(event)}
+            />
           )
         )}
       </MenuWrapper>
