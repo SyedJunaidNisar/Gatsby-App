@@ -17,6 +17,14 @@ const MockupWrapper = styled.div`
   position: relative;
   perspective: 5000;
 
+  @media (max-width: 768px) {
+    transform: scale(0.6);
+    transform-origin: top left;
+  }
+  @media (max-width: 450px) {
+    transform: scale(0.4);
+  }
+
   div {
     transform: rotateY(-20deg) rotateX(20deg);
     transform-origin: bottom left;
@@ -35,7 +43,7 @@ const MockupWrapper = styled.div`
     }
   }
 
-  // Transition Delay to all mockups // 
+  // Transition Delay to all mockups //
 
   &.mockup1 {
     transform: translate(-30px, -30px);
